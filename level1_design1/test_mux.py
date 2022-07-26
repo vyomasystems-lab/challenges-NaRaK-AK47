@@ -43,7 +43,7 @@ async def test_mux(dut):
  
     for i in range(31):
         Selection = i
-        dut.sel.value = Selection
+        dut.sel.value = i
         await Timer(2,units = 'ns')
         if(dut.out.value != test[Selection]):
             dut._log.info(f'Sel = {Selection} model = {test[Selection]} DUT = {dut.out.value} false')
