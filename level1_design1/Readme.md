@@ -55,15 +55,16 @@ for i in range(31):
     
 The assert statement is used for comparing the Multiplexer's outut to the expected value.
 
-The following asser statement is used:
+The following assert statement is used:
 
 ```
  assert dut.out.value == test[Selection] ,"Multiplexer result is incorrect "+Selection
 ```
+Dut's output vaule is checked against the expected input values as mentioned in the input array 
 
 ## Test Scenario
-- Test Input for the input pint 0-30 are given as above in the input port
-- For the selected lines corresponding should be expeected from the above array 
+- Test Input for the input pint 0-30 are given as above in the input port.
+- For the selected lines corresponding values should be expected from the above array.
 - For line 12 , 13 and 30 the output doesn't matches to the values in the array.
 
 
@@ -74,5 +75,28 @@ Output mismatches for the above inputs proving that there is a design bug as dis
 If assert not used all incorrect test cases can be viewed 
 
 ![image](https://user-images.githubusercontent.com/90963965/181369332-36fa5b69-12cc-4a34-bb7d-e63ff1e5a5eb.png)
+
+## Design Bug
+
+Based on the above test input and analysing the design, we see the following
+
+```
+      5'b01101: out = inp12; ==> Bug b01101 correspondes to 13 
+      5'b01101: out = inp13;
+```
+Another bug is 
+```
+5'b11110: out = inp30; ==> Bug // case for input 30 not metioned 
+```
+
+For fixing the design b01101 should be changed to b01100 and the above case for input must be added 
+
+## Design Fix
+
+Updating the design and re-running the test makes the test pass.
+
+![image](https://user-images.githubusercontent.com/90963965/181370492-3f7f8353-8873-4d5d-9500-403bd0fabb35.png)
+
+
 
 
