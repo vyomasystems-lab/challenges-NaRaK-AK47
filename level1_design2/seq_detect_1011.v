@@ -62,7 +62,7 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_1011;
         else
-          next_state = SEQ_10;  // instead of idle IDLE 
+          next_state = SEQ_10;  // instead of  IDLE 
       end
       SEQ_1011:
       begin
@@ -71,7 +71,8 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
          else
            next_state = SEQ_10;
        end
-       // next_state = IDLE; // Above state code instead of this statement
+      // next_state = IDLE; // Above if else code instead of this statement
+      // end
     endcase
   end
 endmodule
