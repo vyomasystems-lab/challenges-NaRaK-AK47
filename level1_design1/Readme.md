@@ -60,3 +60,19 @@ The following asser statement is used:
 ```
  assert dut.out.value == test[Selection] ,"Multiplexer result is incorrect "+Selection
 ```
+
+## Test Scenario
+- Test Input for the input pint 0-30 are given as above in the input port
+- For the selected lines corresponding should be expeected from the above array 
+- For line 12 , 13 and 30 the output doesn't matches to the values in the array.
+
+
+Output mismatches for the above inputs proving that there is a design bug as dispayed in the figure below
+
+![image](https://user-images.githubusercontent.com/90963965/181369078-322ea2fc-9e2c-4286-943e-35876e66983c.png)
+
+If assert not used all incorrect test cases can be viewed 
+
+![image](https://user-images.githubusercontent.com/90963965/181369332-36fa5b69-12cc-4a34-bb7d-e63ff1e5a5eb.png)
+
+
