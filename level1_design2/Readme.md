@@ -49,6 +49,8 @@ For correct output the necessay chnages which needs to be made are
 
 ## Design Fix After Corrections
 
+Updating the design and re-running the test makes the test pass.
+
 ![image](https://user-images.githubusercontent.com/90963965/181362916-687519ed-0dbc-4375-bb02-097f2539155d.png)
 
 
