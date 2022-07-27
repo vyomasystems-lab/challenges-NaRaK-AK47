@@ -31,7 +31,7 @@ The seqCount variable contains the number of sequence detected in the given sequ
 
 ![image](https://user-images.githubusercontent.com/90963965/181361166-342db53c-90fe-4b08-b811-9452f420a711.png)
 
-Output mismatches for the above inputs proving that there is a design bug.
+Output mismatches for the above inputs proving that there is a design bug. This problem states that it is not able to check for the overlapping sequences.
 
 ## Design Bug
 
