@@ -22,5 +22,14 @@ async def test_seq_bug1(dut):
     await FallingEdge(dut.clk)  
     dut.reset.value = 0
     await FallingEdge(dut.clk)
-
+    seqCount = 0
+    inputSeq = [0b0,0b1,0b0,0b1,0b1,0b0,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b1]
+    for i in inputSeq:
+        dut.inp_bit.value = i
+        await FallingEdge(dut.clk)
+        if(dut.seq_seen.value == 1):
+            seqCount+=1
+        dut._log.info(f'Input Sequnce = {dut.inp_bit.value} Sequence Count = {seqCount} DUT = {dut.seq_seen.value}')
+    assert seqCount ==5 , "All sequence are not detected "
     cocotb.log.info('#### CTB: Develop your test here! ######')
+
