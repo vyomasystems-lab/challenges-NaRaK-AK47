@@ -42,7 +42,7 @@ Based on the above test input and analysing the design using the correct FSM dia
 
 ![image](https://user-images.githubusercontent.com/90963965/181361914-cd8a7ffd-d327-4923-b756-ef2f367e583e.png)
 
-For correct output the necessay chnages which needs to be made are 
+For correct output the necessay changes which needs to be made are 
 
 ![image](https://user-images.githubusercontent.com/90963965/181362776-b1d11b86-61e7-4315-9c59-7b4095cc7390.png)
 
