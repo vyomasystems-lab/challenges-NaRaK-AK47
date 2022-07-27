@@ -13,3 +13,32 @@ The values are assigned to the input port using
 ```
 inputSeq = [0b0,0b1,0b0,0b1,0b1,0b0,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b0,0b1,0b1,0b1]
 ```
+The assert statement is used for comparing the sequence detector's outut to the expected value.
+
+The following assert statemet is used:
+
+```
+    assert seqCount ==5 , "All sequence are not detected "
+```
+
+The seqCount variable contains the number of sequence detected in the given sequence and is compared to the number of sequence actually present.
+
+## Test Scenario 
+
+- Test input sequence = 01011010110110110111
+- Expected Output of sequecnce detected should be 5.
+- Observed Dut output is 2 i.e. output driven high only twice.
+
+![image](https://user-images.githubusercontent.com/90963965/181361166-342db53c-90fe-4b08-b811-9452f420a711.png)
+
+Output mismatches for the above inputs proving that there is a design bug.
+
+## Design Bug
+
+<img src ="https://user-images.githubusercontent.com/90963965/181361434-a2b08dee-d434-40d0-b4ca-67c3ad5de30c.png" width = "400" height = "400"/>
+
+
+Based on the above test input and analysing the design using the correct FSM diagram for the sequence detector as above , we see the following
+
+
+
