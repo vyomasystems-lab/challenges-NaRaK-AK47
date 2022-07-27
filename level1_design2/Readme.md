@@ -40,5 +40,18 @@ Output mismatches for the above inputs proving that there is a design bug.
 
 Based on the above test input and analysing the design using the correct FSM diagram for the sequence detector as above , we see the following
 
+![image](https://user-images.githubusercontent.com/90963965/181361914-cd8a7ffd-d327-4923-b756-ef2f367e583e.png)
+
+For correct output the necessay chnages which needs to be made are 
+
+![image](https://user-images.githubusercontent.com/90963965/181362776-b1d11b86-61e7-4315-9c59-7b4095cc7390.png)
+
+
+## Design Fix After Corrections
+
+![image](https://user-images.githubusercontent.com/90963965/181362916-687519ed-0dbc-4375-bb02-097f2539155d.png)
+
+
+
 
 
