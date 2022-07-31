@@ -6,6 +6,8 @@ My GitPod View Page
 
 ## Verification Environment
 
-The CoCoTb based Python test is developed as explained. The test drives inputs to the Design Under Test ( bcd adder module here) which takes in  3 4-bit inputs a and b and gives 5-bit output sum
+The CoCoTb based Python test is developed as explained. The test drives inputs to the Design Under Test ( bcd adder module here) which takes in 2 4-bit inputs a and b and a single bit input cin and gives 16 bit output sum and a gives single bit output 
 
-The values are assigned to the input port using
+The values are assigned to the input port using 
+
+
