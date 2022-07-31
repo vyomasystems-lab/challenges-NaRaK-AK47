@@ -25,3 +25,31 @@ assert dut_output == expected_mav_putvalue, error_message
 ```
 
 
+## Test Scenario 
+
+- Test inputs : src1 = 0x0 , src2 = 0x0 ,src3 = 0x0 and instr = 0x40007033.
+- Expected Output : 0x01.
+- Dut Outut : 0x01.
+
+![image](https://user-images.githubusercontent.com/90963965/182025176-e188f570-74e7-4fee-aa10-926dcc4af680.png)
+
+From the above image the can be seen that it passes the test for given input and output.
+
+### Failed Test case 1 
+
+- Test inputs : src1 = 0x1 , src2 = 0x1 ,src3 = 0x0 and instr = 0x40007033.
+- Expected Output : 0x01.
+- Dut Outut : 0x03.
+
+![image](https://user-images.githubusercontent.com/90963965/182025265-6af6d3e7-3821-447e-b9ab-3f0dde687cb0.png)
+
+### Failed Test case 2 
+
+- Test inputs : src1 = 0x1 , src2 = 0x1 ,src3 = 0x0 and instr = 0x101010B3.
+- Expected Output : 0x00.
+- Dut Outut : 0x02.
+
+![image](https://user-images.githubusercontent.com/90963965/182025337-5bfdda33-eb10-45ff-aa07-8e1a423c2a6e.png)
+
+
+
