@@ -11,19 +11,20 @@ The CoCoTb based Python test is developed as explained. The test drives inputs t
 The values are assigned to the input port using 
 
 ```
-  for i in range(9):
-        dut.a.value = i
-        dut.b.value = i+1
-        dut.cin.value = 0b0
+   A = 5
+   B = 6
+   dut.a.value = A
+   dut.b.value = B
+   dut.cin.value = 0b0
         
 ```
-The assert statement is used for comparing the bcd adder's outut to the expected value.
+The assert statement is used for comparing the bcd adder's output to the expected value.
 
 The following assert statement is used:
 
 ```
     assert dut.cout.value == couti,"Cout result is incorrect "
-    assert dut.sum.value == (2*i+1)%10, "Sum output is incorrect"
+    assert dut.sum.value == (A+B)%10, "Sum output is incorrect"
         
 ```
 ## Test Scenario
@@ -59,4 +60,14 @@ begin
     
  ```
 For the bcd adder design, the logic in the `if condition` should be `temp > 9` and another correction is `temp = temp + 6` 
+
+## Design Fix
+
+Updating the design and re-running the test makes the test pass
+
+![image](https://user-images.githubusercontent.com/90963965/182123581-62a6a0e6-089d-4bea-8f50-dd9bc4d1a6cd.png)
+
+
+![image](https://user-images.githubusercontent.com/90963965/182123495-aba0ba80-e67d-48ac-9a69-cbb0bd365ead.png)
+
 
